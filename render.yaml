@@ -5,11 +5,11 @@ services:
     region: frankfurt
     plan: free
     branch: main
-    rootDir: .
-    buildCommand: npm install && npm run build
+    buildCommand: npm install --include=dev && npm run build
     startCommand: npm start
     envVars:
       - key: NODE_ENV
         value: production
       - key: DATABASE_URL
         sync: false
+
